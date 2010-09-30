@@ -162,6 +162,14 @@ module Jasmine
       end
     end
 
+    def disabled_tags
+      if simple_config['disable_tagged']
+        simple_config['disable_tagged'].split(' ').map { |tag| "'#{tag}'" }.join(', ')
+      else
+        []
+      end
+    end
+
     module SeleniumServerForkHackForRSpec
       # without this, Selenium's forked process will attempt to run specs a second time at exit;
       # see http://www.ruby-forum.com/topic/212722

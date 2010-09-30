@@ -26,6 +26,8 @@
         return trivialReporter.specFilter(spec);
       };
 
+      jasmineEnv.disableTagged([<%= disabled_tags %>]);
+
       window.onload = function() {
         jasmineEnv.execute();
       };

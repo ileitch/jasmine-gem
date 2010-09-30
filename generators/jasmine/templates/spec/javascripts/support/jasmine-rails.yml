@@ -79,3 +79,22 @@ src_dir:
 # spec_dir: spec/javascripts
 #
 spec_dir: spec/javascripts
+
+# disable_tagged
+#
+# Disable tagged spec suites.
+# Default: []
+#
+# EXAMPLE:
+#
+# Given a suite such as:
+#
+#   describe("My experimental suite", function() {
+#     tag('work-in-progress');
+#   });
+#
+# This suite can be disabled by using:
+#
+# disable_tagged: work-in-progress
+#
+disable_tagged:
