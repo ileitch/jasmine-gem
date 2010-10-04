@@ -89,12 +89,13 @@ spec_dir: spec/javascripts
 #
 # Given a suite such as:
 #
-#   describe("My experimental suite", function() {
-#     tag('work-in-progress');
+#   describe("My experimental suite", {tags: ['work-in-progress']}, function() {
+#     it(...);
 #   });
 #
 # This suite can be disabled by using:
 #
-# disable_tagged: work-in-progress
+# disable_tagged:
+#   - work-in-progress
 #
 disable_tagged:
