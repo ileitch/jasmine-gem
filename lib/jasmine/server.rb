@@ -54,7 +54,7 @@ module Jasmine
       jasmine_files = @jasmine_files
       css_files = @jasmine_stylesheets + (@config.css_files || [])
       js_files = @config.js_files(focused_suite)
-      disabled_tags = @config.disabled_tags
+      disabled_tags_as_json = "[#{@config.disabled_tags.map { |tag| "'#{tag}'" }.join(', ')}]"
       body = ERB.new(File.read(File.join(File.dirname(__FILE__), "run.html.erb"))).result(binding)
       [
         200,

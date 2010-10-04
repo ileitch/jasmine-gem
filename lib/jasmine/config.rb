@@ -164,7 +164,7 @@ module Jasmine
 
     def disabled_tags
       if simple_config['disable_tagged']
-        simple_config['disable_tagged'].split(' ').map { |tag| "'#{tag}'" }.join(', ')
+        simple_config['disable_tagged']
       else
         []
       end
